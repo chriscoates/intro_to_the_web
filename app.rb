@@ -1,7 +1,7 @@
 require "sinatra"
 
 get '/' do
-  "Hello World!"
+  erb(:index)
 end
 
 get '/secret' do
@@ -16,6 +16,10 @@ get '/andanotherroute' do
   "And this is another route"
 end
 
-get '/cat' do
+get '/catfile' do
 	send_file 'cat.html'
+end
+
+get '/cat' do
+	erb(:cat)
 end
