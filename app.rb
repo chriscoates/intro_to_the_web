@@ -15,3 +15,7 @@ end
 get '/andanotherroute' do
   "And this is another route"
 end
+
+get '/cat' do
+	send_file 'cat.html'
+end
