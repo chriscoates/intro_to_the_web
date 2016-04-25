@@ -1,7 +1,9 @@
 require "sinatra"
 
 get '/' do
+  @randomname = ["Amigo", "Oscar", "Viking", "Tabby"].sample
   erb(:index)
+
 end
 
 get '/secret' do
@@ -21,5 +23,7 @@ get '/catfile' do
 end
 
 get '/cat' do
-	erb(:cat)
+  "<div>
+    <img src='http://bit.ly/1eze8aE' style='border:1px dashed red' >
+  </div>"
 end
