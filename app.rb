@@ -29,6 +29,6 @@ end
 
 get '/named-cat' do
 	p "Passed variable for name: #{params}"
-	@randomname = params[:name]
+	@randomname = params[:name_of_cat]
   erb(:index)
 end
