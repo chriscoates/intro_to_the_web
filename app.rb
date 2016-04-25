@@ -27,8 +27,12 @@ get '/random-cat' do
   </div>"
 end
 
-get '/named-cat' do
+post '/named-cat' do
 	p "Passed variable for name: #{params}"
 	@randomname = params[:name_of_cat]
   erb(:index)
+end
+
+get '/cat-form' do
+	erb(:form)
 end
